@@ -2,4 +2,14 @@ wp-config.php
 
 wp-content/uploads
 
+wp-content/plugins
+
+wp-content/index.php
+
+wp-includes
+
+wp-admin
+
 dev
+
+.htaccess
