@@ -120,6 +120,8 @@ jQuery(document).ready(function ($){
   $('.but-contact').click(function(){
     $('.contact').toggleClass('contact-open');
     $(this).toggleClass('contact-open');
+    $('.mobile-button').removeClass('mobile-button-open');
+    $('.main-nav').toggleClass('mobile-open');
     if($('#contact-window').hasClass('contact-open')){
       $('#contact-window').velocity('slideDown',{duration: 500, easing: 'easeInOutQuint'})
     } else {

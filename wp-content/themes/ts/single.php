@@ -53,7 +53,7 @@ $actual_link = 'http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]';
 					<span class="icons face"><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&t=<?php the_title(); ?>" target="blank"><img src="<?php echo get_template_directory_uri() ?>/img/trans.png" /></a>
 					</span>
 					<span class="icons twit"><a href="http://twitter.com/share"><img src="<?php echo get_template_directory_uri() ?>/img/trans.png" /></a></span>
-					<span class="icons pint"><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img style="margin: 0 0 -5px 0;" onclick="doPinIt();" src="<?php echo get_template_directory_uri() ?>/img/trans.png" alt="Pin It" /></a></span>
+					<span class="icons pint"><a href="javascript:void((function()%7Bvar%20e=document.createElement('script');e.setAttribute('type','text/javascript');e.setAttribute('charset','UTF-8');e.setAttribute('src','http://assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);document.body.appendChild(e)%7D)());"><img style="margin: 0 0 0 0;" onclick="doPinIt();" src="<?php echo get_template_directory_uri() ?>/img/trans.png" alt="Pin It" /></a></span>
 				</div><!-- social -->
 			</div><!-- options-bar -->
 		</div><!-- post-top -->

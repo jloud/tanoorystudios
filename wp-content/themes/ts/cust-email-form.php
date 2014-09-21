@@ -1,4 +1,4 @@
-<p>You can send an email to me below</p>
+<p>You can send an email an me below</p>
 
 <form method="post" action="<?php echo get_template_directory_uri(); ?>/cust-email-engine.php">
 	<input type="text" name="Name" id="Name" placeholder="Name"/>

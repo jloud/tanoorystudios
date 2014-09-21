@@ -7646,7 +7646,7 @@ a:hover#menu-icon {
 .contact {
   width: 100%;
   height: auto;
-  margin: 48px auto 0;
+  margin: 0 auto 0;
   position: absolute;
   top: 0;
   z-index: 999;
@@ -7655,6 +7655,11 @@ a:hover#menu-icon {
   -webkit-transition: opacity 0.75s ease;
   -moz-transition: opacity 0.75s ease;
   transition: opacity 0.75s ease;
+}
+@media only screen and (min-width: 600px) {
+  .contact {
+    margin-top: 48px;
+  }
 }
 .contact.contact-open {
   opacity: 1;
@@ -7678,7 +7683,7 @@ a:hover#menu-icon {
   border-bottom: 15px solid #821a1a;
 }
 .contact p {
-  margin: 0 0 20px;
+  margin: 20px 0 20px;
   background: transparent;
   color: #d8d8d1;
   line-height: 1;
@@ -7687,8 +7692,13 @@ a:hover#menu-icon {
   text-transform: uppercase;
   font-family: "lato-regular";
 }
+@media only screen and (min-width: 600px) {
+  .contact p {
+    margin-top: 0;
+  }
+}
 .contact .profile {
-  height: 330px;
+  height: 200px;
   border: 10px solid #ecece8;
   background: url("../img/profile.jpg") no-repeat center center;
   -webkit-background-size: cover;
@@ -7696,8 +7706,16 @@ a:hover#menu-icon {
   -o-background-size: cover;
   background-size: cover;
 }
+@media only screen and (min-width: 600px) {
+  .contact .profile {
+    height: 330px;
+  }
+}
 .contact .email-form {
   height: 330px;
+}
+.contact form {
+  position: relative;
 }
 .contact form input[type='text'], .contact form textarea {
   margin-bottom: 15px;
@@ -7712,8 +7730,6 @@ a:hover#menu-icon {
 }
 .contact .submit-button {
   padding: 0.5em 2em;
-  position: absolute;
-  bottom: 0;
   background: #0a9995;
   border: 0;
   font-family: "lato-regular";
@@ -7966,9 +7982,10 @@ a:hover#menu-icon {
   margin: 15px auto 20px;
   text-align: center;
   z-index: 20;
+  line-height: 1.6;
 }
 .single .etsy {
-  height: 35px;
+  height: 38px;
   margin-right: 15px;
   padding: 4px 10px;
   text-align: center;
@@ -8016,7 +8033,11 @@ a:hover#menu-icon {
   padding: 3px 5px;
 }
 .single .social {
+  height: 38px;
+  padding: 4px 0;
   display: inline-block;
+  position: relative;
+  top: -8px;
 }
 .single .social .icons {
   width: 35px;
@@ -8025,8 +8046,7 @@ a:hover#menu-icon {
   -webkit-border-radius: 17.5px;
   -moz-border-radius: 17.5px;
   border-radius: 17.5px;
-  margin: 10px;
-  padding: 15px;
+  margin: 0 10px;
   display: inline-block;
   background-position: center center;
   background-repeat: no-repeat;

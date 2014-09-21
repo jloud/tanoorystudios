@@ -120,10 +120,11 @@
 		margin: 15px auto 20px;
 		text-align: center;
 		z-index: 20;
+		line-height: 1.6;
 	}
 
 	.etsy {
-		height: 35px;
+		height: 38px;
 		margin-right: 15px;
 		padding: 4px 10px;
 		text-align: center;
@@ -168,11 +169,14 @@
 	}
 
 	.social {
+		height: 38px;
+		padding: 4px 0;
 		display: inline-block;
+		position: relative;
+		top: -8px;
 		.icons {
 			@include circle(35px, $light-bg-color);
-			margin: 10px;
-			padding: 15px;
+			margin: 0 10px;
 			display: inline-block;
 			background-position: center center;
 			background-repeat: no-repeat;
