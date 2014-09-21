@@ -1,0 +1,293 @@
+.front > div {
+	height: 100vh;
+	position: relative;
+	.main-titles {
+		margin-top: 0;
+		padding-top: 50px;
+		padding-bottom: 20px;
+		position: relative;
+		z-index: 100;
+		img {
+			width: 300px;
+			height: auto;
+			margin: auto;
+			display: block;
+		}
+		h1 {
+			margin: 0;
+			font-size: 60px;
+			line-height: 0.75;
+			text-align: center;
+			&::first-letter {
+				font-size: 1.3em;
+				letter-spacing: 0;
+			}
+			span {
+				font-family: $serif-bold;
+				font-size: 40px;
+				letter-spacing: 0.3em;
+			}
+			.studios {
+				font-family: $serif-light;
+			}
+		}
+		hr {
+			width: 300px;
+			margin: 40px auto;
+			border-bottom: 1px $main-color solid;
+		}
+		p {
+			color: $main-color;
+			text-align: center;
+			font-family: $sans;
+			letter-spacing: 0.3em;
+			font-size: 20px;
+		}
+	}
+	.logo-holder {
+		margin: auto;
+		border: 3px solid $main-color;
+		overflow: hidden;
+		@include circle(400px, transparentize(#fff,0.75));
+	}
+	.see-work {
+		margin: 0;
+		padding: 20px 0;
+		z-index: 5;
+		text-align: center;
+		position: relative;
+		@include linear-gradient(transparent 0%, transparentize($bg-color, 0.1) 50%);
+		a {
+			height: 70px;
+			font-family: $sans-light;
+			font-size: 18px;
+			color: $accent-color;
+			text-transform: uppercase;
+		}
+		img {
+			width: 60px;
+			opacity: 0.8;
+		}
+		.arrow {
+			margin: 0 auto;
+			padding: 14px;
+			display: block;
+			@include circle (50px, $main-color);
+			@include box-shadow(1px 1px #fff);
+			@include transition (background-color 0.5);
+			.down-icon {
+				width: 23px;
+				height: 15px;
+				display: inline-block;
+				background: url('../img/arrow-down.png') no-repeat center center;
+			}
+		}
+		.recent-text {
+			text-align: center;
+			font-size: 20px;
+			line-height: 0.5;
+			opacity: 0;
+			color: $accent-color;
+			@include transition (opacity 0.5);
+		}
+		&:hover {
+			.arrow {
+				background-color: $accent-color;
+			}
+			.recent-text {
+				opacity: 1;
+			}
+		} 
+	}
+}
+
+.bgg-overlay {
+	width: 100%;
+	height: 100%;
+	display: block;
+	
+}
+
+.front-bg-pics {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	> div {
+		@extend .row;
+		height: 300px;
+		max-width: none;
+		position: relative;
+		opacity: 0.3;
+	}
+	img {
+		width: 100%;
+		min-width: 700px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: auto;
+	}
+	.bg-pic-0 {
+		z-index: -5;
+	}
+	.bg-pic-1 {
+		z-index: -20;
+	}
+	.bg-pic-2 {
+		z-index: -10;
+	}
+}
+
+.options {
+	max-width: 400px;
+	margin: 30px auto 0;
+	padding: 30px 0 27px;
+	z-index: 7;
+	border-top: 1px solid $main-color;
+	text-align: center;
+	li {
+		margin-right: 20px;
+		display: inline;
+		text-align: center;
+		a {
+			width: 100%;
+			padding: 0.5em 1em;
+			background: $main-color;
+			text-align: center;
+			@include box-shadow(1px 1px #fff);
+			color: $light-bg-color;
+			font-family: $sans-light;
+			text-transform: uppercase;
+			font-size: 15px;
+			letter-spacing: 0.1em;
+			&:hover {
+				background: $accent-color;
+				@include box-shadow(0 0 transparent);
+			}
+		} 
+	}
+	li:last-child {
+		margin-right: 0;
+	}
+}
+
+.front-thumbnails > div {
+	position: relative;
+	padding: 2em 0;
+	background: $bg-color;
+	border-left: 0;
+	border-right: 0;
+	border-top: 8px solid $main-color;
+	z-index: 200;
+	h2 {
+		height: 10%;
+		margin: 0 auto 25px;
+		color: $main-color;
+		span {
+			&:first-letter {
+				font-size: 1.3em;
+			}
+		}
+	}
+	.home-holder {
+		width: 100%;
+		max-width: 1000px;
+		height: 500px;
+		margin: auto;
+		padding-bottom: 5px;
+		.slide {
+			padding: 0 30px;
+
+			.artwork {
+				width: 100%;
+				height: 480px;
+				display: block;
+				position: relative;
+				background: $light-bg-color;
+				border-top: 10px solid $light-bg-color;
+				border-bottom: 10px solid $light-bg-color;
+				overflow: hidden;
+				z-index: 700;
+				@include trans-properties(opacity);
+				font-family: $sans;
+				font-size: 20px;
+				letter-spacing: 0.2em;
+				text-align: center;
+				text-transform: uppercase;
+				color: $accent-color;
+				-webkit-transform-style: preserve-3d;
+			  -moz-transform-style: preserve-3d;
+			  transform-style: preserve-3d;
+				img {
+					width: 100%;
+					height: auto;
+					position: relative;
+  				top: 50%;
+  				transform: translateY(-50%);
+					border: 10px solid $light-bg-color;
+					@include trans-properties(opacity);
+				}
+				&:hover {
+					img {
+						opacity: 0.6;
+					}
+				}
+			}
+			.caption {
+				width: 100%;
+				padding: 0.5em;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: block;
+				background: $light-bg-color;
+				z-index: 10;
+				opacity: 1;
+				@include trans-properties(opacity);
+			}
+		}
+	}
+	.controls {
+		width: 100%;
+		margin-top: 25px;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		div {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			vertical-align: middle;
+			position: relative;
+			div {
+				width: 99%;
+				height: 40px;
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+			span {
+				width: 35px;
+				height: 70px;
+				padding: 15px 10px;
+				position: absolute;
+				cursor: pointer;
+				z-index: 800;
+			}
+			.prev {
+				left: 3%;
+			}
+			.next {
+				right: 3%;
+			}
+			&:before {
+				content: '';
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+		}
+	}
+}

@@ -1,0 +1,159 @@
+$sans: "lato-light";
+$sans-light: "lato-light";
+$sans-regular: "lato-regular";
+$sans-bold: "lato-bold";
+$sans-italic: "lato-italic";
+
+$serif-light: 'neutron-light';
+$serif: 'neutron-regular';
+$serif-bold: 'neutron-bold';
+
+$title-font: 'neutron-light';
+$menu-font: "lato-light";
+$title-font: "old-standard-regular";
+$sans-bold-italic: "lato-bold-italic";
+$text-font: "neutron-light";
+$text-bold: "neutron-bold";
+
+$menu-bg-color: #F3EDE5;
+$main-color: #0A9995;
+$accent-color: #a30f1d;
+$bg-color: #D8D8D1;
+$light-bg-color: #ECECE8;
+$red: #b93939;
+$accent-color: #821A1A;
+
+$light-green: #11bfa9;
+$gradient-light: #dfded4;
+$text-color: #4D4D4D;
+
+/*
+#dfded4 really light brown
+#d6d3c4
+#cdcab9 light brown
+#432f21 brown
+
+#244650 deep blue
+#125C72 OLD DARK BLUE
+
+0A9995
+*/
+
+
+
+$topbar-breakpoint: (400px) !default; // Change to 9999px for always mobile layout
+$topbar-media-query: "only screen and (min-width: #{$topbar-breakpoint})";
+$main-break: 300px;
+
+$mobile: 600px;
+$tablet: 600px;
+$wide: 2000px;
+
+@mixin respond-to($media) {
+	@if $media == mobile {
+    @media only screen and (max-width: $mobile) { @content; }
+  }
+  @if $media == tablet {
+    @media only screen and (min-width: $tablet) { @content; }
+  }
+  @else if $media == wide {
+    @media only screen and (min-width: $wide) { @content; }
+  }
+}
+
+@mixin widget-properties {
+    margin-bottom: 1.5em;
+    position: relative;
+}
+
+@mixin title-shadow {
+    text-shadow: 1px 1px #000000;
+}
+
+@mixin trans-properties($prop) {
+    -webkit-transition: $prop 0.5s ease;
+    -moz-transition: $prop 0.5s ease;
+    -o-transition: $prop 0.5s ease;
+    transition: $prop 0.5s ease;
+}
+
+@mixin rotate($degrees) {
+	-webkit-transform: rotate(#{$degrees}deg);
+	-moz-transform: rotate(#{$degrees}deg);
+	-ms-transform: rotate(#{$degrees}deg);
+	-o-transform: rotate(#{$degrees}deg);
+	transform: rotate(#{$degrees}deg);
+	filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+	-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+	zoom: 1;
+}
+
+@mixin circle($width, $color) {
+  width: $width;
+  height: $width;
+  background-color: $color;
+  -webkit-border-radius: $width/2;
+     -moz-border-radius: $width/2;
+          border-radius: $width/2;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin rem-fallback($property, $values...) {
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $pxValues: #{$pxValues + $value*16}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  } 
+
+  @for $i from 1 through $max {
+    $value: strip-unit(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  } 
+  
+  #{$property}: $pxValues; 
+  #{$property}: $remValues; 
+}

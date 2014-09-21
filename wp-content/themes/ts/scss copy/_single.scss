@@ -1,0 +1,162 @@
+.single {
+	margin: 0;
+	.wrapper {
+		height: 100%;
+		/*.bg-box {
+			width: 40%;
+			height: 100vh;
+			min-height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-color: transparentize(#000,0.8);
+			z-index: 1;
+		}*/
+	}
+	article {
+		width: 100%;
+		position: relative;
+	}
+	.post-bottom {
+		width: 100%;
+		position: relative;
+		.holder {
+			width: 100%;
+			max-width: 700px;
+			height: 600px;
+			margin: auto;
+			.gallery {
+				width: 500px;
+				height: 600px;
+				margin: auto;
+				.cycle-slide {
+					width: 400px;
+					height: auto;
+					margin-left: 60px;
+					max-width: none;
+					border: 10px solid transparentize(#fff, 0.5);
+				}
+			}
+			.slideshow {
+				width: 100%;
+				height: 100%;
+				margin: auto;
+				position: relative;
+				text-align: center;
+			}
+		}
+	}
+	.post-top {
+		margin: 0;
+		padding-top: 98px;
+		position: relative;
+		background: $light-bg-color;
+		h2 {
+			margin: auto;
+			font-size: 20px;
+			letter-spacing: 0.1em;
+			z-index: 999;
+			text-align: center;
+			span {
+				color: $main-color;
+				z-index: 999;
+			}	
+		}
+		.post-link-main {
+			padding: 15px;
+			border-top: 1px solid $main-color;
+			line-height: 2.6;
+			@include respond-to(mobile){
+				border: 0;
+			}
+		}
+		img {
+			width: 10px;
+			height: auto;
+		}
+	}
+	.post-link-left, .post-link-right {
+		padding: 0;
+		z-index: 300;
+		display: inline-block;
+		line-height: 1;
+		a {
+			font-size: 14px;
+			vertical-align: baseline;
+			position: relative;
+			text-align: center;
+			top: -2px;
+		}
+	}
+	.post-link-left a {
+		right: 2px;
+	}
+	.post-link-right a {
+		left: 2px;
+	}
+	.side-bar {
+		width: 100%;
+		margin: 5px;
+		z-index: 20;
+		.side-holder {
+			text-align: center;
+			.etsy {
+				padding: 4px 10px;
+				display: inline;
+				text-align: center;
+				a {
+					font-size: 12px;
+					color: #ffffff;
+					text-transform: uppercase;
+					letter-spacing: 0.2em;
+					font-family: $sans-regular;
+					&:hover span {
+						background: $accent-color;
+					}
+				}
+				span {
+					margin: 5px;
+					padding: 5px 10px;
+					background: #000000;
+				}
+				img {
+					height: 25px;
+					border: 0;
+				}
+			}
+			.social {
+				display: inline;
+				span {
+					height: 50px;
+					margin: 10px;
+					padding: 15px;
+					display: inline-block;
+					background-position: center center;
+					@include circle(50px, $light-bg-color);
+					background-repeat: no-repeat;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+				.face {
+					 background-image: url('../img/icon_social-face.png');
+					 &:hover {
+						 background-image: url('../img/icon_social-face-ac.png');
+					 } 
+				}
+				.twit {
+					background-image: url('../img/icon_social-twit.png'); 
+					&:hover {
+						background-image: url('../img/icon_social-twit-ac.png');
+					} 
+				}
+				.pint {
+					background-image: url('../img/icon_social-pint.png');
+				 &:hover {
+					 background-image: url('../img/icon_social-pint-ac.png');
+				 } 
+				}
+			}
+		}
+	}
+}

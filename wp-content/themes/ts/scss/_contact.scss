@@ -1,0 +1,107 @@
+.contact {
+	width: 100%;
+	height: auto;
+	margin: 48px auto 0;
+	position: absolute;
+	top: 0;
+	z-index: 999;
+	display: none;
+	opacity: 0;
+	@include transition(opacity 0.75s ease);
+	&.contact-open {
+		opacity: 1;
+	}
+	//@include transition(height ease 0.5s, border ease 0.5s);
+	.holder {
+		@extend .row;
+		padding: 30px;
+		position: relative;
+		background: transparentize(#000000,0.2);
+		border-top: 10px solid $accent-color;
+	}
+	.top-arrow {
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: -20px;
+		left: 30px;
+		display: block;
+		opacity: 1;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 15px solid $accent-color;
+	}
+	p {
+		margin: 0 0 20px;
+		background: transparent;
+		color: $bg-color;
+		line-height: 1;
+		font-size: 19px;
+		text-align: left;
+		text-transform: uppercase;
+		font-family: $sans-regular;
+	}
+	.profile {
+		@extend .large-4;
+		@extend .columns;
+		height: 330px;
+		border: 10px solid $light-bg-color;
+		background: url('../img/profile.jpg') no-repeat center center;
+		-webkit-background-size: cover;
+ 		-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	}
+	.email-form {
+		@extend .large-8;
+		@extend .columns;
+		height: 330px;
+	}
+	form, p {
+	}
+	form input[type='text'], form textarea {
+		margin-bottom: 15px;
+		background: $bg-color;
+		border: 0;
+	}
+	input {
+		max-width: 350px;
+	}
+	form textarea {
+		height: 9em;
+	}
+	.submit-button {
+		padding: 0.5em 2em;
+		position: absolute;
+		bottom: 0;
+		background: $main-color;
+		border: 0;
+		font-family: $sans-regular;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: $bg-color;
+		box-shadow: 1px 1px $light-bg-color;
+		@include transition(background 0.5s ease);
+		&:hover {
+			background: $accent-color;
+		}
+	}
+	@include placeholder {
+		text-transform: uppercase;
+    font-weight:100;
+	}
+}
+
+.but-contact {
+	&.contact-open a {
+		background: $accent-color;
+		color: #ffffff !important;
+	}
+}
+
+.contact-open-li {
+	a {
+		color: #ffffff !important;
+		background: $accent-color;
+	}
+}

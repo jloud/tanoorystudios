@@ -1,0 +1,115 @@
+.top-bar {
+	height: auto;
+  background-color: transparent;
+  overflow: visible;
+}
+
+.top-bar-section ul li.active > a {
+    background: transparent;
+    color: inherit;
+}
+
+.top-bar-section ul {
+    background: transparent;
+}
+
+.top-bar-section > ul > .divider, .top-bar-section > ul > [role="separator"] {
+    height: 0;
+    border: none;
+    clear: none;
+}
+
+.top-bar-section li a:not(.button) {
+    padding: 0;
+    line-height: inherit;
+    background: inherit;
+}
+
+.top-bar-section .has-dropdown > a:after {
+    border: 0;
+}
+
+.top-bar-section > .menu-container > ul > .divider, .top-bar-section > ul > [role="separator"] {
+    width: 0;
+    height: 0;
+    border: none;
+}
+
+.top-bar-section .has-dropdown > a {
+    padding-right: 0 !important;
+}
+
+.top-menu-holder header div {
+    width: auto;
+}
+
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background: transparent;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	position: relative;
+	background-color: $bg-color;
+	/* @include background-image(linear-gradient(-45deg, transparentize(#11bfa9, 0.6), lighten(#e8d7c2, 40%))); 
+	background-color: #fff;
+	background-repeat: no-repeat;
+	background-attachment: fixed;*/
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	min-height: 100%;
+	font-family: $sans-light;
+	background-color: $bg-color;
+	//@include background-image(url('../img/bg2.png'), linear-gradient(-45deg, darken(#cdcab9, 1), $gradient-light));
+}
+
+ul {
+	list-style: none;	
+}
+
+hr {
+	border: 0;
+}
+
+h1 {
+	font-family: $serif-bold;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	color: $main-color;
+	letter-spacing: 0.1em;
+	text-shadow: 1px 1px rgba(255, 255, 255, 1);
+}
+
+h2 {
+	font-weight: normal;
+	font-family: $serif-light;
+	font-size: 30px;
+	color: $main-color;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	font-weight: normal;
+	font-style: normal;
+	text-shadow: 1px 1px rgba(255, 255, 255, 1);
+}
+
+h3 {
+	font-family: $sans-italic;
+	text-transform: uppercase;
+}
+
+p {
+	font-family: $sans;
+	text-align: center;
+}
+.clearfix {
+	clear: both;
+	display: block;
+	float: none;
+}

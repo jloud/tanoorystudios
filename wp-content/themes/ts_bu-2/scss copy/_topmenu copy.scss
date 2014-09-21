@@ -1,0 +1,146 @@
+.contain-to-grid {
+	height: 13vh;
+	min-height: 100px;
+	padding: 1em;
+	background-color: $main-color;
+}
+
+.nav-section {
+	width: 100%;
+	margin: auto;
+	display: block;
+	ul {
+		width: 100%;
+		margin: auto;
+		padding: 0;
+		text-align: center;
+		li {
+			width: 15%;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			position: relative;
+			font-size: 15px;
+			text-transform: uppercase;
+			font-family: $sans-regular;
+			letter-spacing: 0.2em;
+			text-align:  center;
+			a {
+				color: #fff;		
+			}
+			ul {
+				width: auto;
+				height: 0;
+				margin-top: 10px;
+				overflow: hidden;
+				opacity: 0;
+				position: absolute;
+				top: -10px;
+				left: -10%;
+				border: 1px solid $main-color;
+				@include transition(all 0.15s ease);
+				z-index: 20;
+				li {
+					width: auto;
+					padding: 0.24em 1em;
+					display: block;
+					a {
+						color: $main-color;
+					}
+				} 
+			}
+		}
+		.open ul {
+			height: auto;
+			margin-top: 30px;
+			top: 0;
+			opacity: 1;
+			background-color: $bg-color;
+		}
+	}
+	.logo {
+		margin-right: 40px;
+		img {
+			max-width: none;
+			height: 70px;
+			display: inline;
+		}
+	}
+}
+
+
+/*
+.front {
+	padding: 7em 3em;
+	
+	div {
+		span {
+			width: 358px;
+			margin: auto;
+			display: block;
+			
+		}
+		
+	}
+	
+	background-image: url('../img/front-01.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-color: $front-color-gr;
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		
+		li {
+			width: 100px;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+			position: relative;
+			font-size: 25px;
+			text-transform: uppercase;
+			font-family: $menu-font;
+			letter-spacing: 0.2em;
+			text-align:  center;
+			
+			a {
+				color: $main-color;		
+			}
+			
+			ul {
+				width: 500px;
+				margin-top: 10px;
+				display:block;
+				position: absolute;
+				left: -70%;
+				li {
+					width: auto;
+					margin-right: 10px;
+					font-size: 20px;
+				} 
+			}
+		}
+		
+		#menu-item-84 {
+			width: 200px;
+			margin: 0;
+			padding: 0;
+			font-size: 55px;
+		}
+		
+		#menu-item-23 {
+			margin-left: 0;
+			padding-left: 0;
+		}
+		
+	}
+	
+	hr {
+		width: 90%;
+		margin: auto;
+		border-bottom: 2px solid $main-color;
+	}
+	
+} */

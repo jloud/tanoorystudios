@@ -1,0 +1,73 @@
+.single {
+	article {
+		@extend .row;
+		margin: 50px auto 0;
+		position: relative;
+	}
+	.post-content {
+		@extend .large-4;
+		@extend .columns;
+		position: relative;
+		h1 {
+			font-size: 25px;
+		}
+		.gallery-thumbs {
+			width: 100%;
+			margin: auto;
+			text-align: center;
+			 a {
+				width: 80px;
+				height: 80px;
+				margin: 0.3em;
+				display: inline-block;
+				overflow: hidden;
+				background-color: rgba(255,255,255,0.4);
+				border: 1px solid $main-color;
+				img {
+					width: 130px;
+					max-width: none;
+					margin: auto;
+					height: auto;
+					text-align: center;
+				}
+			}
+		}
+	}
+	
+	.slideshow {
+		@extend .large-8;
+		@extend .columns;
+		.gallery {
+			width: 100%;
+			margin: auto;
+
+			a {
+				border: 5px $main-color solid;
+				background-color: transparentize(#fff, 0.7);
+				text-align: center;
+				img {
+					margin: auto;
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	.post-link-left, .post-link-right {
+		padding: 1em;
+		display: block;
+		position: absolute;
+		top: 40%;
+		z-index: 300;
+		background-color: $main-color;
+		a {
+			font-family: $sans-bold-italic;
+			font-size: 9px;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+	}
+	
+	
+}

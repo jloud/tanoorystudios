@@ -1,0 +1,221 @@
+.front > div {
+	height: 87vh;
+	position: relative;
+	.main-titles {
+		width: 100%;
+		margin: 0;
+		position: relative;
+		h1 {
+			margin: 0;
+			padding-top: 100px;
+			text-transform: uppercase;
+			color: $main-color;
+			font-size: 60px;
+			line-height: 45px;
+			letter-spacing: 0.1em;
+			&::first-letter {
+				font-size: 1.3em;
+				letter-spacing: 0;
+			}
+			span {
+				font-family: $serif-bold;
+				font-size: 40px;
+				letter-spacing: 0.3em;
+			}
+		}
+		p {
+			color: $main-color;
+			text-align: center;
+			font-family: $sans;
+			letter-spacing: 0.3em;
+			font-size: 20px;
+		}
+	}
+	.logo-holder {
+		margin: auto;
+		border: 3px solid $main-color;
+		overflow: hidden;
+		@include circle(400px, transparentize(#fff,0.75));
+	}
+	.see-work {
+		width: 100%;
+		position: absolute;
+		bottom: 40px;
+		a {
+			font-family: $sans-regular;
+			font-size: 18px;
+			color: $accent-color;
+			text-transform: capitalize;
+		}
+		.arrow {
+			display: inline-block;
+			font-size: 35px;
+			line-height: 32px;
+			color: $accent-color;
+			@include rotate(180);
+			/*@include circle (40px, transparent);*/
+		}
+	}
+}
+
+.options {
+	width: 100%;
+	margin: auto;
+	display: block;
+	ul {
+		@extend .row;
+		margin-top: 100px;
+		li {
+			@extend .columns;
+			a {
+				width: 100%;
+				margin: auto;
+				padding: 1.3em 0;
+				display: block;
+				border: 1px solid $main-color;
+				text-align: center;
+				color: $main-color;
+				font-family: $serif-light;
+				text-transform: uppercase;
+				font-size: 20px;
+				letter-spacing: 0.2em;
+			}
+			span {
+				margin: auto;
+			}
+		}
+		.front-spots {
+			@extend .large-2;
+			@extend .large-offset-2
+		}
+		.front-logos {
+			@extend .large-2;
+		}
+		.front-ills {
+			@extend .large-4;
+		}
+	}
+}
+
+.front-thumbnails > div {
+	background-color: $bg-color;
+	h2 {
+		margin: auto;
+		background-color: #fff;
+		span {
+			padding: .04em 1em .2em;
+			display: inline-block;
+			position: relative;
+			top: 40px;
+			border: 1px solid $main-color;
+			&::first-letter {
+				font-size: 1.3em;
+			}
+		}
+	}
+	.front-holder {
+		width: 100%;
+		max-width: 1300px;
+		margin: auto;
+		padding-top: 60px;
+		.front-thumb {
+			width: 450px;
+			margin-bottom: 60px;
+			position: relative;
+			float: left;
+			
+			a {
+				display: block;
+				font-family: $sans;
+				font-size: 20px;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				color: #fff;
+				&:hover {
+					span {
+						opacity: 1;
+					}
+					img {
+						opacity: 1;
+						border-color: $main-color;
+					}
+				}
+			}
+			span {
+				padding: 1em;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: block;
+				background-color: $main-color;
+				z-index: 10;
+				opacity: 0;
+				@include trans-properties(opacity);
+			}
+			img {
+				border: 10px solid transparentize(#fff, 0.3);
+				opacity: 0.6;
+				z-index: 5;
+				@include trans-properties(opacity);
+			}
+		}
+		/*div {
+			width: 230px;
+			height: 230px;
+			margin: 2%;
+			position: relative;
+			text-align: center;
+			overflow: hidden;
+			float: left;
+			border: 6px dotted $main-color;
+			img {
+				width: 100%;
+				max-width: none;
+			}
+			span {
+				display: inline-block;
+				position: absolute;
+				top: 30px;
+				left: 30px;
+			}
+		}*/
+		
+		/*
+		.front-thumb-1 {
+			width: 500px;
+			height: 500px;
+		}
+		.front-thumb-2 {
+			width: 190px;
+			height: 190px;
+		}
+		.front-thumb-3 {
+			width: 190px;
+			height: 190px;
+		}
+		.front-thumb-4 {
+			width: 270px;
+			height: 270px;
+		}
+		.front-thumb-5 {
+			width: 110px;
+			height: 110px;
+		}
+		.front-thumb-6 {
+			width: 110px;
+			height: 110px;
+		}
+		.front-thumb-8 {
+			width: 420px;
+			height: 420px;
+		}
+		.clearfix {
+			width: 0;
+			height: 0;
+			clear: both;
+			border: none;
+		}
+		*/
+	}
+	
+}

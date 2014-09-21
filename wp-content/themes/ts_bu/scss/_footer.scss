@@ -1,0 +1,62 @@
+.main-footer {
+	 width: 100%;
+   margin: auto;
+   font-size: 0.8em;
+   position: relative;
+   clear: both;
+   background: $light-bg-color;
+   border-top: 5px solid $main-color;
+   a, p {
+	   color: $main-color;
+	   text-transform: uppercase;
+	   font-family: $sans;
+	   font-size: 12px;
+   }
+   .footer-logo {
+	   text-align: center;
+	   position: relative;
+	   p {
+		   width: auto;
+		   margin: auto;
+		   position: relative;
+		   top: -10px;
+		   z-index: 200;
+		   span {
+			   background: $main-color;
+			   padding: 10px 20px;
+			   color: $light-bg-color;
+			   font-family: $serif-light;
+			   letter-spacing: 0.3em;
+		   }
+	   }
+   }
+	.holder {
+		margin: auto;
+	  padding: 1.3em;   
+	    h3 {
+	        margin: 0;
+	    }
+	    p {
+	    padding-top: 15px;
+		  text-align: center;
+	   }
+	    
+	   ul {
+	   	width: 100%;
+	   	margin: auto;
+	   	text-align: center;
+		   	li {
+		   		padding: 5px 20px;
+			   display: inline-block;
+		   }
+		   	.menu-item-84 {
+			   	a {
+				   	display: none;
+			   	}
+			   	ul a {
+				   	display: inline;
+			   	}
+		   	}
+	   }
+	}    
+}

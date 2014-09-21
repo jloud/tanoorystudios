@@ -1,0 +1,73 @@
+.recent {
+	max-width: 900px;
+	margin: 40px auto;
+  position: relative;
+  .fb-link {
+  	margin: 0;
+  	padding: 5px;
+  	clear: both;
+    background-color: $main-color;
+    text-align: center;
+    a {
+	    color: #fff;
+	    text-transform: uppercase;
+    }
+  }
+}
+
+.wall {
+  ul {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .post {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: $light-bg-color; 
+    text-align: center;
+    p {
+      font-size: 13px;
+    }
+    a {
+      color: $main-color;
+    }
+    img {
+	    margin: auto;
+    }
+    .message {
+	    font-size: 15px;
+    }
+    .status {
+      position: relative;
+    }
+    .fb-header {
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+     h2 {
+        margin: 0;
+        padding: 0 2em 0 1em;
+        display: inline;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-family: $sans;
+        a {
+            color: $main-color;
+        }
+			}
+      .avatar {
+          width: 60px;
+          height: 60px;
+          border: 2px solid $text-color;
+      }
+    }
+    
+    .meta {
+       padding: 0.3em 0.7em;
+       font-size: 0.7em;
+       text-transform: uppercase;
+       letter-spacing: 0.1em;
+    }
+  }
+}
