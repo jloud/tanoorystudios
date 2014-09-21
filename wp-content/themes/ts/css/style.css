@@ -7849,9 +7849,6 @@ a:hover#menu-icon {
 .single .wrapper {
   height: 100%;
 }
-.single .owl-carousel .owl-wrapper-outer {
-  overflow: visible;
-}
 .single article {
   width: 100%;
   position: relative;
