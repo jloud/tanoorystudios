@@ -35,7 +35,7 @@ $success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
 
 // redirect to success page 
 if ($success){
-  print "<meta http-equiv=\"refresh\" content=\"0;URL=".get_template_directory_uri()."cust-email-thanks.php\">";
+  print "<meta http-equiv=\"refresh\" content=\"0;URL=cust-email-thanks.php\">";
 }
 else{
   print "<meta http-equiv=\"refresh\" content=\"0;URL=error.htm\">";
