@@ -113,7 +113,8 @@ endif;
 function custom_scripts() {
     wp_enqueue_script( 'owl', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'images-loaded', get_template_directory_uri() . '/js/vendor/imagesloaded.pkgd.min.js', array(), '1.0.0', true );
-	wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/vendor/masonry.pkgd.js', array(), '1.0.0', true );
+	wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/vendor/isotope.pkgd.min.js', array(), '1.0.0', true );
+    wp_enqueue_script( 'isotope', get_template_directory_uri() . '/js/vendor/isotope.center.js', array(), '1.0.0', true );
 	//wp_enqueue_script( 'jquery-temp', get_template_directory_uri() . '/js/vendor/jquery.tmpl.min.js', array(), '1.0.0', true );
 	//wp_enqueue_script( 'jquery-stellar', get_template_directory_uri() . '/js/vendor/jquery.stellar.min.js', array(), '1.0.0', true );
 	wp_enqueue_script( 'mobile-menu', get_template_directory_uri() . '/js/vendor/mobile-menu.js', array(), '1.0.0', true );

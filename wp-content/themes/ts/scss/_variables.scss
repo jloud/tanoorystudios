@@ -157,3 +157,50 @@ $wide: 2000px;
   #{$property}: $pxValues; 
   #{$property}: $remValues; 
 }
+
+/* Icons from directory "" */
+@mixin arrow-down{
+width:22px;height:14px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 0;background-repeat:no-repeat;
+}
+@mixin icon-etsy{
+width:40px;height:20px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -14px;background-repeat:no-repeat;
+}
+@mixin icon-fb{
+width:13px;height:25px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -34px;background-repeat:no-repeat;
+}
+@mixin icon-fb-wh{
+width:13px;height:25px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -59px;background-repeat:no-repeat;
+}
+@mixin icon-left{
+width:30px;height:50px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -84px;background-repeat:no-repeat;
+}
+@mixin icon-left-active{
+width:30px;height:50px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -134px;background-repeat:no-repeat;
+}
+@mixin icon-pi{
+width:20px;height:22px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -184px;background-repeat:no-repeat;
+}
+@mixin icon-pi-wh{
+width:20px;height:22px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -206px;background-repeat:no-repeat;
+}
+@mixin icon-right{
+width:30px;height:50px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -228px;background-repeat:no-repeat;
+}
+@mixin icon-right-active{
+width:30px;height:50px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -278px;background-repeat:no-repeat;
+}
+@mixin icon-tw{
+width:22px;height:20px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -328px;background-repeat:no-repeat;
+}
+@mixin icon-tw-wh{
+width:22px;height:20px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -348px;background-repeat:no-repeat;
+}
+@mixin logo-large{
+width:290px;height:145px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -368px;background-repeat:no-repeat;
+}
+@mixin logo-medium{
+width:166px;height:81px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -513px;background-repeat:no-repeat;
+}
+@mixin logo-small{
+width:117px;height:57px;background-image:url('../img/icons.png');background-image:url('../img/icons.svg');background-position:0 -594px;background-repeat:no-repeat;
+}

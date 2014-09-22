@@ -35,11 +35,9 @@
 				@include transition (background-color 0.5s);
 				&:before {
 					content: "";
-					width: 23px;
-					height: 15px;
 					display: inline-block;
 					z-index: 105;
-					background: url('../img/arrow-down.png') no-repeat center center;
+					@include arrow-down;
 				}
 			}
 			.recent-text {
@@ -78,11 +76,12 @@
 	z-index: 100;
 	background: transparentize($bg-color, 0.3);
 	.logo {
-		width: 305px;
-		height: 150px;
 		margin: auto;
 		display: block;
-		background: url('../img/logo-large.svg') no-repeat center center;
+		@include logo-medium;
+		@include respond-to(tablet){
+			@include logo-large;
+		}
 	}
 	p {
 		padding: 0 20px;
@@ -104,20 +103,15 @@
 		height: 400px;
 		max-width: none;
 		position: relative;
-		opacity: 0.3;
+		opacity: 0.2;
 		background: url('../img/front_03.png') no-repeat center center;
 		-webkit-background-size: cover;
 	  -moz-background-size: cover;
 	  -o-background-size: cover;
 	  background-size: cover;
-	}
-	img {
-		width: 100%;
-		min-width: 700px;
-		position: absolute;
-		top: 0;
-		left: 0;
-		margin: auto;
+	  @include respond-to(tablet){
+	  	opacity: 0.3;
+	  }
 	}
 }
 
@@ -224,19 +218,19 @@
 		&.next {
 			right: 0;
 			.arrow {
-				background-image: url('../img/icon_right.svg');
+				@include icon-right;
 			}
 			&:hover .arrow {
-				background-image: url('../img/icon_right_active.svg');
+				@include icon-right-active;
 			}
 		}
 		&.prev {
 			left: 0;
 			.arrow {
-				background-image: url('../img/icon_left.svg');
+				@include icon-left;
 			}
 			&:hover .arrow {
-				background-image: url('../img/icon_left_active.svg');
+				@include icon-left-active;
 			}
 		}
 	}

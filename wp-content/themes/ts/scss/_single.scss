@@ -29,7 +29,6 @@
 		height: auto;
 		max-width: none;
 		max-height: 400px;
-		margin: 0 30px;
 		display: block;
 		border: 10px solid transparentize(#fff, 0.5);
 		box-shadow: 1px 1px rgba(255, 255, 255, 1);
@@ -61,19 +60,19 @@
 		&.next {
 			right: 0;
 			.arrow {
-				background-image: url('../img/icon_right.svg');
+				@include icon-right;
 			}
 			&:hover .arrow {
-				background-image: url('../img/icon_right_active.svg');
+				@include icon-right-active;
 			}
 		}
 		&.prev {
 			left: 0;
 			.arrow {
-				background-image: url('../img/icon_left.svg');
+				@include icon-left;
 			}
 			&:hover .arrow {
-				background-image: url('../img/icon_left_active.svg');
+				@include icon-left-active;
 			}
 		}
 	}
@@ -153,12 +152,10 @@
 			@include transition(background 0.5s);
 		}
 		.etsy-logo {
-			width: 40px;
-			height: 20px;
 			margin: 5px 5px 0 0;
 			padding: 0;
 			display: inline-block;
-			background: url('../img/icon_etsy.svg') no-repeat center center;
+			@include icon-etsy;
 		}
 		.etsy-text {
 			position: relative;
@@ -174,36 +171,53 @@
 		padding: 4px 0;
 		display: inline-block;
 		position: relative;
-		top: -8px;
+	
 		.icons {
 			@include circle(35px, $light-bg-color);
+			position: relative;
 			margin: 0 10px;
 			display: inline-block;
-			background-position: center center;
-			background-repeat: no-repeat;
+			text-align: center;
 			@include transition(background-color 0.5s ease);
 			&:hover {
 				cursor: pointer;
 				background-color: $accent-color;
 			}
 		}
-		.face {
-			 background-image: url('../img/icon_fb.png');
-			 &:hover {
-				 background-image: url('../img/icon_fb_wh.png');
-			 } 
+		.social-icon {
+			margin: auto;
+			display: inline-block;
+			text-align: center;
+			position: relative;
 		}
-		.twit {
-			background-image: url('../img/icon_tw.png'); 
-			&:hover {
-				background-image: url('../img/icon_tw_wh.png');
+		.face {
+			.social-icon {
+			 top: 4px;
+			 @include icon-fb;
+			 &:hover {
+				 @include icon-fb-wh;
+			 }
 			} 
 		}
+		.twit {
+			bottom: 5px;
+			.social-icon{
+				top: 7px;
+				@include icon-tw;
+				&:hover {
+					@include icon-tw-wh;
+				} 
+			}
+		}
 		.pint {
-			background-image: url('../img/icon_pi.png');
-		 &:hover {
-			 background-image: url('../img/icon_pi_wh.png');
-		 } 
+			bottom: 6px;
+			.social-icon{
+				top: 7px;
+			 @include icon-pi;
+			 &:hover {
+				 @include icon-pi-wh;
+			 } 
+			}
 		}
 	}
 }
