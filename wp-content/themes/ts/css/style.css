@@ -8066,7 +8066,7 @@ a:hover#menu-icon {
   background-position: 0 -34px;
   background-repeat: no-repeat;
 }
-.single .social .face .social-icon:hover {
+.single .social .face:hover .social-icon {
   width: 13px;
   height: 25px;
   background-image: url("../img/icons.png");
@@ -8086,7 +8086,7 @@ a:hover#menu-icon {
   background-position: 0 -328px;
   background-repeat: no-repeat;
 }
-.single .social .twit .social-icon:hover {
+.single .social .twit:hover .social-icon {
   width: 22px;
   height: 20px;
   background-image: url("../img/icons.png");
@@ -8106,7 +8106,7 @@ a:hover#menu-icon {
   background-position: 0 -184px;
   background-repeat: no-repeat;
 }
-.single .social .pint .social-icon:hover {
+.single .social .pint:hover .social-icon {
   width: 20px;
   height: 22px;
   background-image: url("../img/icons.png");

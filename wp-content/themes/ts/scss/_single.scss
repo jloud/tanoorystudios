@@ -194,30 +194,30 @@
 			.social-icon {
 			 top: 4px;
 			 @include icon-fb;
-			 &:hover {
-				 @include icon-fb-wh;
-			 }
-			} 
+			}
+			&:hover .social-icon {
+			 @include icon-fb-wh;
+		 	} 
 		}
 		.twit {
 			bottom: 5px;
 			.social-icon{
 				top: 7px;
 				@include icon-tw;
-				&:hover {
-					@include icon-tw-wh;
-				} 
 			}
+			&:hover .social-icon {
+				@include icon-tw-wh;
+			} 
 		}
 		.pint {
 			bottom: 6px;
 			.social-icon{
 				top: 7px;
 			 @include icon-pi;
-			 &:hover {
-				 @include icon-pi-wh;
-			 } 
 			}
+			&:hover .social-icon {
+			 @include icon-pi-wh;
+		 	} 
 		}
 	}
 }
